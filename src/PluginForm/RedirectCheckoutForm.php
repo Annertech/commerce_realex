@@ -36,10 +36,19 @@ class RedirectCheckoutForm extends PaymentOffsiteForm {
     $payable->setValue('payable_amount', $payment->getAmount()->getNumber());
     $payable->setValue('payable_currency', $currency_code);
     $payable->setValue('payable_currency_symbol', $currency_symbol);
+    $payable->setValue('realex_config', $plugin->getConfiguration());
+
+    // Customer Data
     $payable->setValue('given_name', $address->getGivenName());
     $payable->setValue('family_name', $address->getFamilyName());
+    $payable->setValue('streetAddress1', $address->get('address_line1'));
+    $payable->setValue('streetAddress2', $address->get('address_line2'));
+    $payable->setValue('streetAddress3', $address->get('dependent_locality'));
+    $payable->setValue('city', $address->get('locality'));
+    $payable->setValue('postalCode', $address->get('postal_code'));
+    $payable->setValue('country', $address->get('country_code'));
     $payable->setValue('commerce_order_id', $order->id());
-    $payable->setValue('realex_config', $plugin->getConfiguration());
+    $payable->setValue('commerce_order_mail', $order->get('mail'));
 
     $data = [];
     $temp_store_key = $payable->saveTempStore();

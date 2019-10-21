@@ -45,6 +45,9 @@ class PaymentFailure extends Controllerbase {
         'content-wrapper' => [
           '#type' => 'container',
           'block' => $block,
+          '#attributes' => array(
+            'class' => array("realex-response"),
+          ),
         ],
       ],
     ];

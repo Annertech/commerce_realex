@@ -5,11 +5,11 @@ realex-rxpjs:
     - commerce_realex/rxp-js
 
 rxp-js:
-  remote: https://github.com/realexpayments/rxp-js
-  version: 1.2.1
+  remote: https://github.com/globalpayments/rxp-js
+  version: 1.3.1
   license:
     name: MIT
-    url: https://github.com/realexpayments/rxp-js/blob/master/LICENSE-MIT
+    url: https://github.com/globalpayments/rxp-js/blob/master/LICENSE-MIT
     gpl-compatible: true
   js:
     /libraries/rxp-js/dist/rxp-js.min.js: { minified: true }

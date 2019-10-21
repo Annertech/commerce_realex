@@ -20,26 +20,26 @@
     "repositories": {
         "realexpayments/rxp-js": {
             "type": "package",
-            "package": {
-                "name": "realexpayments/rxp-js",
-                "version": "1.2.1",
+              "package": {
+                "name": "globalpayments/rxp-js",
+                "version": "1.3.1",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://github.com/realexpayments/rxp-js/archive/v1.2.1.zip",
+                    "url": "https://github.com/globalpayments/rxp-js/archive/v1.3.1.zip",
                     "type": "zip"
                 },
                 "require": {
                     "composer/installers": "~1.0"
                 }
             }
-        },
-        "realexpayments/rxp-hpp-php": {
-            "type": "vcs",
-            "url": "https://github.com/Annertech/rxp-hpp-php"
-        }
+      },
+      "globalpayments/php-sdk":{
+        "type": "vcs",
+        "url": "https://github.com/Annertech/php-sdk"
+      }
     },
     "require": {
-        "realexpayments/rxp-hpp-php": "dev-master",
-        "realexpayments/rxp-js": "1.2.1"
+        "globalpayments/php-sdk": "1.3.3.1",
+        "globalpayments/rxp-js": "1.3.1"
     }
 }
